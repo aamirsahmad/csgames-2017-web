@@ -3,11 +3,23 @@ extends layout
 block content
 
   .col-sm-9
-      h3 Heading
+      h3 #{title}
 
-      p VIDEO
+      video#video(width='400', controls='')
+        source#vidfile(src='../uploads/6b6dbf44cf8c4cb8c83b5fbd77c63092.mp4', type='video/mp4')
+        |  Your browser does not support HTML5 video.
+      button(onclick='myFunction1()') Get URL at curent time
+      br
+      |  
+      input#checkbox(type='checkbox', name='checked', value='yes')
+      | End video at (seconds): 
+      input#endSecs(type='text')
+      p#url
 
       h3 Comments
+      ul.list-group
+        each val in comments
+          li.list-group-item= val
 
 
   .col-sm-3
@@ -15,35 +27,35 @@ block content
       li
         a(href='#', title='Claudio Bravo, antes su debut con el Barça en la Liga')
           img.img-responsive(src='http://i.ytimg.com/vi/ZKOtE9DOwGE/mqdefault.jpg', alt='Barca', height='130px')
-          h2 Claudio Bravo, antes su debut con el Bar&ccedil;a en la Liga
+          h2 KJDLKAF KH 
           span.glyphicon.glyphicon-play-circle
           |  
           span.duration 03:15
       li
         a(href='#', title='Claudio Bravo, antes su debut con el Barça en la Liga')
           img.img-responsive(src='http://i.ytimg.com/vi/ZKOtE9DOwGE/mqdefault.jpg', alt='Barca', height='130px')
-          h2 Claudio Bravo, antes su debut con el Bar&ccedil;a en la Liga
+          h2 Cadfaf adfakjdflakj a;ldf
           span.glyphicon.glyphicon-play-circle
           |  
           span.duration 03:15
       li
         a(href='#', title='Claudio Bravo, antes su debut con el Barça en la Liga')
           img.img-responsive(src='http://i.ytimg.com/vi/ZKOtE9DOwGE/mqdefault.jpg', alt='Barca', height='130px')
-          h2 Claudio Bravo, antes su debut con el Bar&ccedil;a en la Liga
+          h2  JDASKJFHALKJDHF L AJHFL HAF AF 0AF 
           span.glyphicon.glyphicon-play-circle
           |  
           span.duration 03:15
       li
         a(href='#', title='Claudio Bravo, antes su debut con el Barça en la Liga')
           img.img-responsive(src='http://i.ytimg.com/vi/ZKOtE9DOwGE/mqdefault.jpg', alt='Barca', height='130px')
-          h2 Claudio Bravo, antes su debut con el Bar&ccedil;a en la Liga
+          h2 JADFKJF LJAHLF ALHFLAJHF LJAF
           span.glyphicon.glyphicon-play-circle
           |  
           span.duration 03:15
       li
         a(href='#', title='Claudio Bravo, antes su debut con el Barça en la Liga')
           img.img-responsive(src='http://i.ytimg.com/vi/ZKOtE9DOwGE/mqdefault.jpg', alt='Barca', height='130px')
-          h2 Claudio Bravo, antes su debut con el Bar&ccedil;a en la Liga
+          h2 jDAHLFHAL AF ;AHF AKJHF 
           span.glyphicon.glyphicon-play-circle
           |  
           span.duration 03:15

@@ -14,51 +14,52 @@ block content
         a(href='#home', data-toggle='tab', aria-expanded='false') Main
       li.active
         a(href='#profile', data-toggle='tab', aria-expanded='true') Trending
+      li.active
+        a(href='#dropdown1', data-toggle='tab', aria-expanded='true') Recent
       li.dropdown
         a.dropdown-toggle(data-toggle='dropdown', href='#')
           | Catagories
           span.caret
         ul.dropdown-menu
           li
-            a(href='#dropdown1', data-toggle='tab') Action
+            a(href='#dropdown1', data-toggle='tab') Recent
           li.divider
           li
             a(href='#dropdown2', data-toggle='tab') Another action
     #myTabContent.tab-content
       #home.tab-pane.fade
-        p
-          | Raw denim you probably haven&apos;t heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.
+        ul.list-unstyled.video-list-thumbs.row
+          li.col-lg-3.col-sm-4.col-xs-6
+            a(href='#', title='Claudio Bravo, antes su debut con el Barça en la Liga')
+              img.img-responsive(src='http://i.ytimg.com/vi/ZKOtE9DOwGE/mqdefault.jpg', alt='Barca', height='130px')
+              h2 Kinfolk mumblecore authentic
+              span.glyphicon.glyphicon-play-circle
+              |  
+              span.duration 03:15
+          li.col-lg-3.col-sm-4.col-xs-6
+            a(href='#', title='Claudio Bravo, antes su debut con el Barça en la Liga')
+              img.img-responsive(src='http://i.ytimg.com/vi/ZKOtE9DOwGE/mqdefault.jpg', alt='Barca', height='130px')
+              h2 Kinfolk mumblecore authentic
+              span.glyphicon.glyphicon-play-circle
+              |  
+              span.duration 03:15
+          li.col-lg-3.col-sm-4.col-xs-6
+            a(href='#', title='Claudio Bravo, antes su debut con el Barça en la Liga')
+              img.img-responsive(src='http://i.ytimg.com/vi/ZKOtE9DOwGE/mqdefault.jpg', alt='Barca', height='130px')
+              h2 Claudio Bravo, antes su debut con el Bar&ccedil;a en la Liga
+              span.glyphicon.glyphicon-play-circle
+              |  
+              span.duration 03:15
       #profile.tab-pane.fade.active.in
         p
           | Food truck fixie locavore, accusamus mcsweeney&apos;s marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.
       #dropdown1.tab-pane.fade
-        p
-          | Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney&apos;s organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork.
+        ul.list-group
+          each val in videos
+            li.list-group-item= val.title
       #dropdown2.tab-pane.fade
         p
           | Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater.
-
-
-    .col-sm-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-default(href='#', role='button') View details »
-    .col-sm-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-default(href='#', role='button') View details »
-    .col-sm-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-default(href='#', role='button') View details »
-    .col-sm-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-default(href='#', role='button') View details »
 
     ul.list-unstyled.video-list-thumbs.row
       li.col-lg-3.col-sm-4.col-xs-6

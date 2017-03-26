@@ -1,16 +1,12 @@
 $(document).ready(function() {
 
    $('#search').typeahead({
-                source: ['Toronto',
-                 'Montreal',
-                 'New York', 
-                 'Buffalo', 
-                 'Boston', 
-                 'Columbus', 
-                 'Dallas', 
-                 'Vancouver', 
-                 'Seattle', 
-                 'Los Angeles']
+                source: [ "Drone Footage of High Rises in a City", 
+                  "Master hacker doing his work",
+                  "A person working on a MacBook",
+                  "Satellite orbiting in SPACE",
+                  "Montreal skyline on Mount Royal",
+                  ]
     });
 
 
@@ -105,5 +101,16 @@ $(document).ready(function() {
   fileUploader.init();
 
 } ());
+
+   function myFunction1() {
+      video = document.getElementById("video");
+      url = document.getElementById("vidfile").src;
+      endSecs = document.getElementById("endSecs").value;
+      if (document.getElementById("checkbox").checked) {
+      document.getElementById("url").innerHTML = url + "#t=" + video.currentTime + "," + endSecs;
+      } else {
+      document.getElementById("url").innerHTML = url + "#t=" + video.currentTime;
+      }
+      }
 
 });
