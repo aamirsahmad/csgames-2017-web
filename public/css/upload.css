@@ -1,0 +1,82 @@
+
+@import "https://gist.githubusercontent.com/ivillamil/616b5caca84b91923739/raw/652b285da3ef18cb21cf4d7c66e1cdec751b8c43/css-loader.scss";
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+input {
+  display: none;
+}
+
+label {
+  align-items: center;
+  background-color: rgba(0,0,0,0.02);
+  cursor: pointer;
+  display: flex;
+  height: 300px;
+  justify-content: center;
+  outline: 3px dashed #ccc;
+  outline-offset: 5px;
+  position: relative;
+  width: 300px;
+
+  * {
+    pointer-events: none;
+  }
+
+  .fa {
+    color: rgba(0,0,0,0.2);
+    font-size: 5em;
+  }
+
+  &.dragging {
+    outline-color: limegreen;
+  }
+
+  &.loaded {
+    .fa {
+      color: rgba(white, 0.5);
+    }
+  }
+
+  &.loading {
+    .fa {
+      display: none;
+    }
+
+    .loader {
+      display: block;
+    }
+  }
+
+  img {
+    left: 50%;
+    opacity: 0;
+    max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    transition: all 300ms ease-in;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+
+    &.loaded {
+      opacity: 1;
+    }
+  }
+}
+
+.loader {
+  display: none;
+}

@@ -4,22 +4,21 @@ block content
   .page-header
     h2
       i.fa.fa-upload
-      | File Upload
+      | Video Upload
 
-  .btn-group.btn-group-justified
-    a.btn.btn-success(href='https://github.com/expressjs/multer', target='_blank')
-      i.fa.fa-book
-      | Multer Documentation
-    a.btn.btn-success(href='http://codepen.io/search/pens?q=custom+file+upload&limit=all&type=type-pens', target='_blank')
-      i.fa.fa-laptop
-      | Customize File Upload
-
-  h3 File Upload Form
   .row
-    .col-sm-6
-      p All files will be uploaded to "/uploads" directory.
-      form(role='form', enctype='multipart/form-data', method='POST')
-        .form-group
-          label.control-label File Input
-          input(type='file', name='myFile')
-        button.btn.btn-primary(type='submit') Submit
+    form(role='form', enctype='multipart/form-data', method='POST')
+      input(type='hidden', name='_csrf', value=_csrf)
+      .form-group
+        label.col-sm-3.control-label(for='email') Title
+        .col-sm-7
+          input.form-control(type='title', name='title', id='title', placeholder='Title', autofocus, required)
+      .form-group
+        label.col-sm-3.control-label(for='email') Keywords
+        .col-sm-7
+          input.form-control(type='keywords', name='keywords', id='keywords', placeholder='Keywords separated with comma', autofocus)
+      hr
+      .form-group.text-center
+          .col-sm-7.text-center
+            input(type='file', name='myFile')
+            button.btn.btn-primary(type='submit') Submit

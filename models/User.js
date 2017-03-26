@@ -23,6 +23,11 @@ const userSchema = new mongoose.Schema({
     location: String,
     website: String,
     picture: String
+  },
+
+  activity: {
+    videos: Array,
+    comments: Array
   }
 }, { timestamps: true });
 
